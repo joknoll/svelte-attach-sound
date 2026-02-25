@@ -31,7 +31,9 @@ export class Sound {
   }
 
   private async create() {
-    const { Howl } = (await import("howler/src/howler.core" as string)) as { Howl: typeof HowlClass };
+    const { Howl } = (await import("howler/src/howler.core" as string)) as {
+      Howl: typeof HowlClass;
+    };
     this.howl = new Howl(this.config);
   }
 

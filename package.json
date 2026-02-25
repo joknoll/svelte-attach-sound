@@ -1,17 +1,23 @@
 {
   "name": "svelte-attach-sound",
-  "type": "module",
   "version": "0.1.0",
   "description": "A Svelte attachment for binding sound playback to DOM events using Howler.js",
-  "author": "",
-  "license": "MIT",
   "keywords": [
-    "svelte",
-    "svelte5",
-    "sound",
+    "attachment",
     "howler",
-    "attachment"
+    "sound",
+    "svelte",
+    "svelte5"
   ],
+  "license": "MIT",
+  "author": "",
+  "files": [
+    "dist"
+  ],
+  "type": "module",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.cts",
   "exports": {
     ".": {
       "require": "./dist/index.cjs",
@@ -19,22 +25,12 @@
     },
     "./package.json": "./package.json"
   },
-  "main": "./dist/index.cjs",
-  "module": "./dist/index.mjs",
-  "types": "./dist/index.d.cts",
-  "files": [
-    "dist"
-  ],
   "scripts": {
     "build": "tsdown",
     "dev": "tsdown --watch",
     "test": "vitest",
     "typecheck": "tsc --noEmit",
     "prepublishOnly": "bun run build"
-  },
-  "peerDependencies": {
-    "howler": ">=2.0.0",
-    "svelte": ">=5.0.0"
   },
   "devDependencies": {
     "@types/howler": "^2.2.12",
@@ -45,5 +41,9 @@
     "tsdown": "^0.18.1",
     "typescript": "^5.9.3",
     "vitest": "^4.0.16"
+  },
+  "peerDependencies": {
+    "howler": ">=2.0.0",
+    "svelte": ">=5.0.0"
   }
 }
