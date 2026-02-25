@@ -1,0 +1,49 @@
+{
+  "name": "svelte-attach-sound",
+  "type": "module",
+  "version": "0.1.0",
+  "description": "A Svelte attachment for binding sound playback to DOM events using Howler.js",
+  "author": "",
+  "license": "MIT",
+  "keywords": [
+    "svelte",
+    "svelte5",
+    "sound",
+    "howler",
+    "attachment"
+  ],
+  "exports": {
+    ".": {
+      "require": "./dist/index.cjs",
+      "import": "./dist/index.mjs"
+    },
+    "./package.json": "./package.json"
+  },
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.cts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsdown",
+    "dev": "tsdown --watch",
+    "test": "vitest",
+    "typecheck": "tsc --noEmit",
+    "prepublishOnly": "bun run build"
+  },
+  "peerDependencies": {
+    "howler": ">=2.0.0",
+    "svelte": ">=5.0.0"
+  },
+  "devDependencies": {
+    "@types/howler": "^2.2.12",
+    "@types/node": "^25.0.3",
+    "bumpp": "^10.3.2",
+    "howler": "^2.2.4",
+    "svelte": "^5.0.0",
+    "tsdown": "^0.18.1",
+    "typescript": "^5.9.3",
+    "vitest": "^4.0.16"
+  }
+}
