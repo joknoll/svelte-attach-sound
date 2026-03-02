@@ -16,3 +16,7 @@ Add sound effects to svelte components.
 ```
 
 For a more advanced example look at the [playground](/playground/src/routes/+page.svelte).
+
+[Demo](https://knolljo.github.io/svelte-attach-sound/)
+
+[npm Package](https://www.npmjs.com/package/svelte-attach-sound)
