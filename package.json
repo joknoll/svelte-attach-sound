@@ -10,6 +10,7 @@
     "svelte5"
   ],
   "license": "MIT",
+  "repository": "https://github.com/knolljo/svelte-attach-sound",
   "author": "",
   "files": [
     "dist"
