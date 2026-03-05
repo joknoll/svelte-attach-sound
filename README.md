@@ -4,6 +4,8 @@ A Svelte attachment for binding sound playback to DOM events using the [Svelte 5
 
 Uses [Howler.js](https://howlerjs.com/) as a peer dependency.
 
+Find CC-Zero licensed sounds at [freesound.org](https://freesound.org/)
+
 ## Installation
 
 ```
