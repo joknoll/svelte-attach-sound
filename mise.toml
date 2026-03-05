@@ -9,14 +9,38 @@ lefthook = "latest"
 committed = "latest"
 
 [hooks]
-postinstall = ["lefthook install"]  # Install Git hooks after installation
+postinstall = ["lefthook install"] # Install Git hooks after installation
 
 [env]
-_.path = [
-  "node_modules/.bin",
-]
+_.path = ["node_modules/.bin"]
 _.file = "./.env.local"
 
 
 [tasks.clean]
-run = "rm -rf node_modules"
+description = "Clean project"
+run = ["rm -rf node_modules dist playground/node_modules playground/build"]
+
+[tasks."release:version"]
+description = "Bump package version and create a git tag."
+usage = '''
+arg "[increment]" default="patch" help="Version increment" {
+  choices "patch" "minor" "major" "prepatch" "preminor" "premajor" "prerelease"
+}
+'''
+run = "npm version ${usage_increment}"
+
+[tasks."release:build"]
+description = "Build the package for distribution"
+depends = ["release:version"]
+run = "bun run build"
+
+[tasks."release:publish"]
+description = "Publish the package to npm"
+depends = ["release:build"]
+raw = true
+run = "npm publish"
+
+[tasks.release]
+description = "Full release: bump version → build → publish to npm"
+depends = ["release:publish"]
+run = "echo 'Released and published to npm!'"
