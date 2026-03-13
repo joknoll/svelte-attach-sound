@@ -9,16 +9,16 @@
     "svelte",
     "svelte5"
   ],
+  "homepage": "https://github.com/joknoll/svelte-attach-sound#readme",
+  "bugs": {
+    "url": "https://github.com/joknoll/svelte-attach-sound/issues"
+  },
   "license": "MIT",
   "author": "joknoll",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/joknoll/svelte-attach-sound.git"
   },
-  "bugs": {
-    "url": "https://github.com/joknoll/svelte-attach-sound/issues"
-  },
-  "homepage": "https://github.com/joknoll/svelte-attach-sound#readme",
   "files": [
     "dist"
   ],

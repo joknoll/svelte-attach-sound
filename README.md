@@ -38,11 +38,11 @@ npm install svelte-attach-sound howler
 
 Svelte attachment that plays a sound on a DOM event.
 
-| Option    | Type                               | Required | Description                                      |
-|-----------|------------------------------------|----------|--------------------------------------------------|
-| `src`     | `string \| string[]`               | Yes      | Audio file URL(s), with fallbacks                |
-| `events`  | `[playEvent, stopEvent?]`          | Yes      | DOM event to trigger play, and optionally stop   |
-| `...rest` | [`HowlOptions`](https://github.com/goldfire/howler.js#options) | No | Any Howler option (`volume`, `loop`, `rate`, etc.) |
+| Option    | Type                                                           | Required | Description                                        |
+| --------- | -------------------------------------------------------------- | -------- | -------------------------------------------------- |
+| `src`     | `string \| string[]`                                           | Yes      | Audio file URL(s), with fallbacks                  |
+| `events`  | `[playEvent, stopEvent?]`                                      | Yes      | DOM event to trigger play, and optionally stop     |
+| `...rest` | [`HowlOptions`](https://github.com/goldfire/howler.js#options) | No       | Any Howler option (`volume`, `loop`, `rate`, etc.) |
 
 ### `useSound(src, events, options?)`
 

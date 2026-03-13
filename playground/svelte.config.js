@@ -4,16 +4,16 @@ import adapter from "@sveltejs/adapter-static";
 const config = {
   kit: {
     paths: {
-      base: "/svelte-attach-sound"
+      base: "/svelte-attach-sound",
     },
     adapter: adapter({
       pages: "build",
       assets: "build",
-      fallback: "index.html"
+      fallback: "index.html",
     }),
     prerender: {
-      entries: ["*"]
-    }
+      entries: ["*"],
+    },
   },
 };
 
